@@ -1,5 +1,5 @@
 Description: >
-  Shubhi Shrivastava : 'Deploy a high-availability web app using CloudFormation'
+  Shubhi Shrivastava / Udacity - Deploy a high-availability web app using CloudFormation
 
 Parameters:
   EnvironmentName:
