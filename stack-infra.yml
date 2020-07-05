@@ -281,7 +281,8 @@ Resources:
     Properties:
         Roles:
           - !Ref UdacityS3ReadOnlyEC2
-
+  
+  # Launch configuration
   WebAppLaunchConfig: 
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
@@ -293,7 +294,6 @@ Resources:
           apt-get install apache2 -y
           systemctl start apache2.service
           cd /var/www/html
-          #echo "Udacity Demo Web Server Up and Running!" > index.html
           aws s3 cp s3://udacity-demo-1/udacity.zip .
           unzip -o udacity.zip
       ImageId: ami-003634241a8fcdec0
@@ -306,6 +306,7 @@ Resources:
           Ebs:
               VolumeSize: '10' 
 
+  # Specifies a target group for an Application Load Balancer or Network Load Balancer
   WebAppTargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
@@ -319,6 +320,7 @@ Resources:
       UnhealthyThresholdCount: 5
       VpcId: !Ref VPC
 
+  # Auto scaling group : Defines an Amazon EC2 Auto Scaling group with the specified name and attributes
   WebAppGroup:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
