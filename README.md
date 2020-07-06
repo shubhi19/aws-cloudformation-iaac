@@ -10,6 +10,7 @@ Your company is creating an Instagram clone called Udagram. Developers pushed th
 2. Two vCPUs, at least 4GB of RAM and 10GB of disk space. The Operating System to be used is Ubuntu 18. 
 
 ## Security groups and roles
+### Specifications
 1. Create an IAM Role that allows EC2 instances to use the S3 Service.
 2. Udagram communicates on the default HTTP Port: 80, so servers will need this inbound port open since it will be used with the Load Balancer and the Load Balancer Health Check. As for outbound, the servers will need unrestricted internet access to be able to download and update its software.
 3. The load balancer should allow all public traffic (0.0.0.0/0) on port 80 inbound, which is the default HTTP port. Outbound, it will only be using port 80 to reach the internal servers.
