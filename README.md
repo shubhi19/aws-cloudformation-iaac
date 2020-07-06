@@ -19,4 +19,4 @@ Your company is creating an Instagram clone called Udagram. Developers pushed th
 5. One of the output exports of the CloudFormation script should be the public URL of the LoadBalancer. Bonus points for adding http:// in front of the load balancer DNS Name in the output, for convenience.
 
 ## Usage
-./create.sh <your-stack-name> stack-infra.yml infra_parameters.json
+./create.sh your-stack-name stack-infra.yml infra_parameters.json
