@@ -1,4 +1,4 @@
-# aws-cloudformation-udacity
+# aws-cloudformation
 IaaC to deploy web servers  highly available web application using CloudFormation
 
 ## Problem Statement
